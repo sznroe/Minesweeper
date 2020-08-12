@@ -1,0 +1,20 @@
+.grid {
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: gray;
+}
+
+.grid div {
+    height: 40px;
+    width: 40px;
+}
+
+.bomb {
+    background-color: orange;
+}
+
+.checked {
+    background-color: red;
+}
