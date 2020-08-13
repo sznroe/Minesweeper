@@ -1,20 +1,57 @@
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
 .grid {
     height: 400px;
     width: 400px;
     display: flex;
+    margin: 0px auto;
     flex-wrap: wrap;
-    background-color: gray;
+    background-color: rgb(230, 227, 227);
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 .grid div {
-    height: 40px;
-    width: 40px;
+    height: 38px;
+    width: 38px;
+    border:1px solid #eee;
+}
+
+.title
+{
+    text-align: center;
+    color: orange;
+    font-size: xx-large;
+}
+#status
+{
+    margin-top:20px;
+    text-align: center;
+    color: orange;
+    font-size: xx-large;
 }
 
 .bomb {
     background-color: orange;
 }
 
+.bomb > span{
+    padding: 9px;
+    display: inline-flex;
+}
+
 .checked {
     background-color: red;
+}
+.checked > span{
+    padding: 9px 14px;
+    display: inline-flex;
+    font-size: large;
+    color: #eee;
 }
