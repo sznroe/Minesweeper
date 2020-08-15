@@ -37,10 +37,6 @@ body {
     font-size: xx-large;
 }
 
-.bomb {
-    background-color: orange;
-}
-
 .bomb > span{
     padding: 9px;
     display: inline-flex;
