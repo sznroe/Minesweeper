@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let total = square.getAttribute('data');
             if (total != 0) {
                 square.classList.add('checked');
-                square.innerHTML = total;
+                square.innerHTML = "<span>"+total+"</span>";
                 return;
             }
             checkSquare(square, currentId);
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!square.classList.contains('checked') && (flags < bombAmount)) {
             if (!square.classList.contains('flag')) {
                 square.classList.add('flag')
-                square.innerHTML = '🚩';
+                square.innerHTML = '<span>🚩</span>';
                 flags++;
                 checkForwin();
             } else {
@@ -139,12 +139,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function gameOver(square) {
+        const status = document.getElementById('status');
+        status.innerHTML = "💣💣💣 BoOm Game Over!";
         console.log("BoOm Game Over!");
         isGameOver = true;
 
         squares.forEach(square => {
             if (square.classList.contains('bomb')) {
-                square.innerHTML = "💣";
+                square.innerHTML = "<span>💣</span>";
             }
         })
     }
@@ -159,6 +161,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (matches === bombAmount) {
+            const status = document.getElementById('status');
+            status.innerHTML = "🎉🎉 You Won!";
             console.log("You Won!");
             isGameOver = true;
         }
